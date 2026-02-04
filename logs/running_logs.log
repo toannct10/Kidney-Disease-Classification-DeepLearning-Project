@@ -1,1 +1,515 @@
 [2026-02-01 15:53:00,135: INFO: main: Welcome to custom log]
+[2026-02-03 08:50:56,976: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 08:50:56,983: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 08:50:56,983: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 08:50:56,983: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\utils\common.py", line 35, in read_yaml
+    return ConfigBox(content)
+  File "box\box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 9, in <module>
+    data_ingestion.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\config\configuration.py", line 14, in __init__
+    self.params = read_yaml(params_filepath)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\utils\common.py", line 38, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
+[2026-02-03 08:52:19,994: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 08:52:19,994: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 08:52:20,010: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 08:52:20,010: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 08:52:20,010: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 08:52:20,010: ERROR: main: "'ConfigBox' object has no attribute 'sourse_url'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'sourse_URL'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'sourse_URL'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'sourse_URL'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'sourse_URL'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'sourse_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'sourse_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'sourse_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 9, in <module>
+    data_ingestion.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\config\configuration.py", line 26, in get_data_ingestion_config
+    sourse_URL = config.sourse_URL,
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'sourse_url'"
+[2026-02-03 08:54:26,972: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 08:54:26,972: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 08:54:26,972: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 08:54:26,972: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 08:54:26,972: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 08:54:26,972: ERROR: main: 'DataIngestionConfig' object has no attribute 'sourse_URL']
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 9, in <module>
+    data_ingestion.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\components\data_ingestion.py", line 32, in download_file
+    raise e
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\components\data_ingestion.py", line 19, in download_file
+    dataset_url = self.config.sourse_URL
+AttributeError: 'DataIngestionConfig' object has no attribute 'sourse_URL'
+[2026-02-03 08:55:14,234: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 08:55:14,234: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 08:55:14,234: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 08:55:14,234: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 08:55:14,234: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 08:55:14,234: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1SS96x2W-oQUIPt7Clqb_y_PbVeJtYW10/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 09:05:15,636: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1SS96x2W-oQUIPt7Clqb_y_PbVeJtYW10/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-02-03 09:05:25,111: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-02-03 12:34:45,889: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 12:34:45,892: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 12:34:45,895: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 12:34:45,896: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 12:34:45,896: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 12:34:45,897: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1SS96x2W-oQUIPt7Clqb_y_PbVeJtYW10/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 12:59:57,550: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 12:59:57,560: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 12:59:57,562: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 12:59:57,562: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 12:59:57,562: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 12:59:57,562: ERROR: main: "'ConfigBox' object has no attribute 'local_data_file'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 9, in <module>
+    data_ingestion.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\config\configuration.py", line 27, in get_data_ingestion_config
+    local_data_file = config.local_data_file,
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+[2026-02-03 13:02:23,505: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 13:02:23,516: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 13:02:23,517: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 13:02:23,517: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 13:02:23,517: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 13:02:23,518: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 13:07:29,492: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-02-03 13:07:35,968: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-02-03 13:07:35,968: INFO: main: *******************]
+[2026-02-03 13:07:35,969: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-02-03 13:07:35,969: ERROR: main: name 'PrepareBaseModelTrainingPipeline' is not defined]
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 20, in <module>
+    prepare_base_model = PrepareBaseModelTrainingPipeline()
+NameError: name 'PrepareBaseModelTrainingPipeline' is not defined
+[2026-02-03 13:44:34,891: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 13:44:34,903: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 13:44:34,905: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 13:44:34,905: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 13:44:34,905: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 13:44:34,906: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 13:48:12,757: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-02-03 13:48:18,800: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-02-03 13:48:18,800: INFO: main: *******************]
+[2026-02-03 13:48:18,800: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-02-03 13:48:18,801: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 13:48:18,802: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 13:48:18,802: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 13:48:18,802: ERROR: main: "'ConfigBox' object has no attribute 'prepare_base_model'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'prepare_base_model'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'prepare_base_model'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'prepare_base_model'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'prepare_base_model'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'prepare_base_model'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'prepare_base_model'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'prepare_base_model'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 22, in <module>
+    prepare_base_model.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_02_prepare_base_model.py", line 13, in main
+    prepare_base_model_config = config.get_prepare_base_model_config()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\config\configuration.py", line 35, in get_prepare_base_model_config
+    config = self.config.prepare_base_model
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'prepare_base_model'"
+[2026-02-03 13:54:35,375: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 13:54:35,377: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 13:54:35,378: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 13:54:35,379: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 13:54:35,379: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 13:54:35,379: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 14:00:56,744: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-02-03 14:01:03,420: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-02-03 14:01:03,420: INFO: main: *******************]
+[2026-02-03 14:01:03,420: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-02-03 14:01:03,422: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 14:01:03,423: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 14:01:03,423: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 14:01:03,423: ERROR: main: "'ConfigBox' object has no attribute 'roor_dir'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'roor_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'roor_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'roor_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'roor_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'roor_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'roor_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'roor_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 22, in <module>
+    prepare_base_model.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_02_prepare_base_model.py", line 13, in main
+    prepare_base_model_config = config.get_prepare_base_model_config()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\config\configuration.py", line 37, in get_prepare_base_model_config
+    create_directories([config.roor_dir])
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'roor_dir'"
+[2026-02-03 14:59:19,342: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 14:59:19,353: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 14:59:19,354: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 14:59:19,354: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 14:59:19,355: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 14:59:19,355: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 15:03:44,065: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-02-03 15:03:50,427: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-02-03 15:03:50,427: INFO: main: *******************]
+[2026-02-03 15:03:50,428: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-02-03 15:03:50,429: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:03:50,430: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:03:50,431: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:03:50,431: INFO: common: Create directory at: artifacts/prepare_base_model]
+[2026-02-03 15:03:50,431: ERROR: main: __init__() missing 1 required positional argument: 'params_image_size']
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 22, in <module>
+    prepare_base_model.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_02_prepare_base_model.py", line 13, in main
+    prepare_base_model_config = config.get_prepare_base_model_config()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\config\configuration.py", line 39, in get_prepare_base_model_config
+    prepare_base_model_config = PrepareBaseModelConfig(
+TypeError: __init__() missing 1 required positional argument: 'params_image_size'
+[2026-02-03 15:13:06,612: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 15:13:06,616: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:13:06,617: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:13:06,618: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:13:06,618: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 15:13:06,619: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 15:13:37,078: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-02-03 15:13:43,422: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-02-03 15:13:43,422: INFO: main: *******************]
+[2026-02-03 15:13:43,422: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-02-03 15:13:43,424: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:13:43,425: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:13:43,426: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:13:43,426: INFO: common: Create directory at: artifacts/prepare_base_model]
+[2026-02-03 15:13:47,661: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-02-03 15:13:47,745: ERROR: main: module 'keras.api._v2.keras.losses' has no attribute 'CategorialCrossentropy']
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 22, in <module>
+    prepare_base_model.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_02_prepare_base_model.py", line 16, in main
+    prepare_base_model.update_base_model()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\components\prepare_base_model.py", line 56, in update_base_model
+    self.full_model = self._prepare_full_model(
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\components\prepare_base_model.py", line 47, in _prepare_full_model
+    loss=tf.keras.losses.CategorialCrossentropy(),
+AttributeError: module 'keras.api._v2.keras.losses' has no attribute 'CategorialCrossentropy'
+[2026-02-03 15:14:53,826: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 15:14:53,827: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:14:53,828: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:14:53,829: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:14:53,829: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 15:14:53,829: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 15:15:25,344: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-02-03 15:15:31,741: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-02-03 15:15:31,741: INFO: main: *******************]
+[2026-02-03 15:15:31,741: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-02-03 15:15:31,743: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:15:31,745: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:15:31,745: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:15:31,745: INFO: common: Create directory at: artifacts/prepare_base_model]
+[2026-02-03 15:15:32,089: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-02-03 15:15:32,281: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2026-02-03 15:15:32,281: INFO: main: *******************]
+[2026-02-03 15:15:32,282: INFO: main: >>>>>> stage Training started <<<<<<]
+[2026-02-03 15:15:32,282: ERROR: main: name 'ModelTrainingPipeline' is not defined]
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 33, in <module>
+    model_trainer = ModelTrainingPipeline()
+NameError: name 'ModelTrainingPipeline' is not defined
+[2026-02-03 15:18:05,529: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 15:18:05,532: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:18:05,533: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:18:05,534: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:18:05,534: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 15:18:05,534: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 15:18:36,959: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-02-03 15:18:43,255: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-02-03 15:18:43,255: INFO: main: *******************]
+[2026-02-03 15:18:43,255: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-02-03 15:18:43,257: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:18:43,258: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:18:43,259: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:18:43,259: INFO: common: Create directory at: artifacts/prepare_base_model]
+[2026-02-03 15:18:43,639: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-02-03 15:18:43,846: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2026-02-03 15:18:43,846: INFO: main: *******************]
+[2026-02-03 15:18:43,846: INFO: main: >>>>>> stage Training started <<<<<<]
+[2026-02-03 15:18:43,848: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:18:43,849: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:18:43,850: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:18:43,850: INFO: common: Create directory at: artifacts\training]
+[2026-02-03 15:18:44,117: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\CT_KIDNEY_BINARY']
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 34, in <module>
+    model_trainer.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_03_model_training.py", line 20, in main
+    training.train_valid_generator()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\components\model_training.py", line 35, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\CT_KIDNEY_BINARY'
+[2026-02-03 15:30:24,471: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 15:30:24,472: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:30:24,473: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:30:24,474: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:30:24,474: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 15:30:24,475: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 15:30:56,722: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-02-03 15:31:04,129: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-02-03 15:31:04,130: INFO: main: *******************]
+[2026-02-03 15:31:04,130: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-02-03 15:31:04,132: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:31:04,133: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:31:04,133: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:31:04,134: INFO: common: Create directory at: artifacts/prepare_base_model]
+[2026-02-03 15:31:04,505: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-02-03 15:31:04,712: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2026-02-03 15:31:04,712: INFO: main: *******************]
+[2026-02-03 15:31:04,712: INFO: main: >>>>>> stage Training started <<<<<<]
+[2026-02-03 15:31:04,714: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:31:04,715: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:31:04,716: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:31:04,716: INFO: common: Create directory at: artifacts\training]
+[2026-02-03 15:40:54,132: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2026-02-03 15:44:24,083: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-02-03 15:44:24,085: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:44:24,094: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:44:24,094: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:44:24,095: INFO: common: Create directory at: artifacts/data_ingestion]
+[2026-02-03 15:44:24,095: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into dile artifacts/data_ingestion/data.zip]
+[2026-02-03 15:44:57,691: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1kiHqtYLhkpCSSn-yewwOcAT-5ylwYZNn/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-02-03 15:45:02,936: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-02-03 15:45:02,936: INFO: main: *******************]
+[2026-02-03 15:45:02,936: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-02-03 15:45:02,937: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:45:02,938: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:45:02,939: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:45:02,939: INFO: common: Create directory at: artifacts/prepare_base_model]
+[2026-02-03 15:45:03,227: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-02-03 15:45:03,388: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2026-02-03 15:45:03,388: INFO: main: *******************]
+[2026-02-03 15:45:03,388: INFO: main: >>>>>> stage Training started <<<<<<]
+[2026-02-03 15:45:03,389: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-03 15:45:03,390: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-03 15:45:03,391: INFO: common: Create directory at: artifacts_root]
+[2026-02-03 15:45:03,391: INFO: common: Create directory at: artifacts\training]
+[2026-02-04 06:37:32,651: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]

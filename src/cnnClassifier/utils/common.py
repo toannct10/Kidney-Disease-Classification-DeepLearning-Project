@@ -1,4 +1,5 @@
-from hashlib import file_digest
+import hashlib
+
 import os
 
 from numpy import empty
