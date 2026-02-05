@@ -513,3 +513,116 @@ x==========x]
 [2026-02-04 06:37:32,651: INFO: main: >>>>>> stage Training completed <<<<<<
 
 x==========x]
+[2026-02-04 22:17:14,716: INFO: main: *******************]
+[2026-02-04 22:17:14,717: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2026-02-04 22:17:14,719: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-04 22:17:14,727: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-04 22:17:14,727: INFO: common: Create directory at: artifacts_root]
+[2026-02-04 22:19:32,388: INFO: common: json file saved at: scores.json]
+[2026-02-04 22:19:32,388: INFO: common: json file saved at: scores.json]
+[2026-02-04 22:19:32,388: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2026-02-04 22:23:52,633: INFO: main: *******************]
+[2026-02-04 22:23:52,633: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2026-02-04 22:23:52,633: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-04 22:23:52,633: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-04 22:23:52,633: INFO: common: Create directory at: artifacts_root]
+[2026-02-04 22:26:06,180: INFO: common: json file saved at: scores.json]
+[2026-02-04 22:26:06,180: INFO: common: json file saved at: scores.json]
+[2026-02-04 22:26:07,066: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2026-02-04 22:26:07,487: INFO: builder_impl: Assets written to: C:\Users\PC\AppData\Local\Temp\tmph0n2j82h\model\data\model\assets]
+[2026-02-04 22:26:15,672: ERROR: main: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 49, in <module>
+    model_evalution.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\components\model_evaluation_mlflow.py", line 74, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2026-02-04 22:28:02,339: INFO: main: *******************]
+[2026-02-04 22:28:02,339: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2026-02-04 22:28:02,339: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-04 22:28:02,339: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-04 22:28:02,339: INFO: common: Create directory at: artifacts_root]
+[2026-02-04 22:30:16,035: INFO: common: json file saved at: scores.json]
+[2026-02-04 22:30:16,035: INFO: common: json file saved at: scores.json]
+[2026-02-04 22:30:16,891: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2026-02-04 22:30:17,286: INFO: builder_impl: Assets written to: C:\Users\PC\AppData\Local\Temp\tmp3vg0k0bo\model\data\model\assets]
+[2026-02-04 22:30:23,408: INFO: dir_util: creating E:\Kidney-Desease-Classification-DeepLearning-Project\mlruns\0\ab923059c74748958b56903c85e7bf0f\artifacts\model\data]
+[2026-02-04 22:30:23,408: INFO: dir_util: creating E:\Kidney-Desease-Classification-DeepLearning-Project\mlruns\0\ab923059c74748958b56903c85e7bf0f\artifacts\model\data\model]
+[2026-02-04 22:30:23,408: INFO: dir_util: creating E:\Kidney-Desease-Classification-DeepLearning-Project\mlruns\0\ab923059c74748958b56903c85e7bf0f\artifacts\model\data\model\assets]
+[2026-02-04 22:30:23,408: INFO: dir_util: creating E:\Kidney-Desease-Classification-DeepLearning-Project\mlruns\0\ab923059c74748958b56903c85e7bf0f\artifacts\model\data\model\variables]
+[2026-02-04 22:30:23,481: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2026-02-04 22:41:40,267: INFO: main: *******************]
+[2026-02-04 22:41:40,267: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2026-02-04 22:41:40,267: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-04 22:41:40,267: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-04 22:41:40,267: INFO: common: Create directory at: artifacts_root]
+[2026-02-04 22:43:57,543: INFO: common: json file saved at: scores.json]
+[2026-02-04 22:43:57,543: INFO: common: json file saved at: scores.json]
+[2026-02-04 22:43:59,019: ERROR: main: API request to endpoint /api/2.0/mlflow/experiments/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\main.py", line 49, in <module>
+    model_evalution.main()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "E:\Kidney-Desease-Classification-DeepLearning-Project\src\cnnClassifier\components\model_evaluation_mlflow.py", line 60, in log_into_mlflow
+    mlflow.set_experiment("Kidney-Disease-Classification")
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 122, in set_experiment
+    experiment_id = client.create_experiment(experiment_name)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 506, in create_experiment
+    return self._tracking_client.create_experiment(name, artifact_location, tags)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 234, in create_experiment
+    return self.store.create_experiment(
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 95, in create_experiment
+    response_proto = self._call_endpoint(CreateExperiment, req_body)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\store\tracking\rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\PC\miniconda3\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/experiments/create failed with error code 403 != 200. Response body: ''
+[2026-02-04 23:13:50,616: INFO: main: *******************]
+[2026-02-04 23:13:50,616: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2026-02-04 23:13:50,616: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-04 23:13:50,616: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-04 23:13:50,616: INFO: common: Create directory at: artifacts_root]
+[2026-02-04 23:16:03,600: INFO: common: json file saved at: scores.json]
+[2026-02-04 23:16:03,613: INFO: common: json file saved at: scores.json]
+[2026-02-04 23:16:07,271: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2026-02-04 23:16:07,665: INFO: builder_impl: Assets written to: C:\Users\PC\AppData\Local\Temp\tmphizgaedy\model\data\model\assets]
+[2026-02-04 23:18:32,497: INFO: main: *******************]
+[2026-02-04 23:18:32,497: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2026-02-04 23:18:32,497: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-02-04 23:18:32,513: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-04 23:18:32,513: INFO: common: Create directory at: artifacts_root]
+[2026-02-04 23:20:45,696: INFO: common: json file saved at: scores.json]
+[2026-02-04 23:20:45,696: INFO: common: json file saved at: scores.json]
+[2026-02-04 23:20:48,605: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2026-02-04 23:20:48,988: INFO: builder_impl: Assets written to: C:\Users\PC\AppData\Local\Temp\tmpvyfxu05m\model\data\model\assets]
+[2026-02-04 23:22:04,439: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
