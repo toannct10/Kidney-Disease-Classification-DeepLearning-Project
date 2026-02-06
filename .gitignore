@@ -153,3 +153,13 @@ dmypy.json
 cython_debug/
 
 artifacts/*
+CT_KIDNEY_BINARY.zip
+
+# Dataset
+*.zip
+*.rar
+*.7z
+data/
+dataset/
+artifacts/data_ingestion/
+kidney_data/
